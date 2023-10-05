@@ -1,0 +1,110 @@
+<script>
+    $(document).on('keypress',function(e) {
+        if(e.which == 13) {
+            $("#divMain #btnCalculation").click();
+            $("#divMain #btnReady").click();
+        }
+    });
+
+    $(document).ready(function(){
+
+        $("#divMain #divTable").append(createRandomBoard());
+
+        createPlayerPieces();
+
+        $("#divMain #btnCalculation").on("click", function(e) {
+
+            if (!$(this).prop("disabled")) {
+
+                let intAnswer = parseInt($("#divMain #dsResult").val());
+
+                checkResultCalculation(intAnswer);
+            }
+        });
+
+    });
+
+    enableCalculation(false);
+
+    //Aguarda 1 segundo e começa o jogo
+    setTimeout(function () {
+        setNextPlayer(1);
+    }, 1000);
+
+</script>
+
+<style>
+
+    #divTable {
+        width: 73.5%;
+        padding: 10px;
+        float: left;
+        background: #2c2c2c;
+        position: relative;
+    }
+
+    .divSide {
+        height: 100%;
+        padding: 10px;
+        background: #2c2c2c;
+    }
+
+    .divRight {
+        width: 26%;
+        float: right;
+    }
+
+    #dsCalculation{
+        width: 100%;
+        background: #e0e0e0;
+    }
+
+    #dsResult{
+        width: 100%;
+    }
+
+    #btnCalculation{
+        width: 100%;
+        height: 30%;
+        font-size: 30pt;
+    }
+
+</style>
+
+<div id="divGame" class="divChild">
+
+    <div id="divTable" class="divSide divCommon d-inline-block">
+
+        <div id="divMessage" class="centerContent divCommon divContent" style="z-index: 15;">
+        </div>
+
+        <div id="divPlayers" class="centerContent" style="z-index: 10;height: 100%; width: 100%; padding: 10px;">
+        </div>
+
+    </div>
+
+    <div class="divRight divSide divCommon d-inline-block" style="height: 64%;">
+        <div id="divCalculation" style="padding: 12%; height: 100%">
+
+            <input id="dsCalculation" type="text" class="fieldDisabled" disabled="disabled">
+            <span style="font-size: 26pt; color: #fff;">=</span>
+            <input id="dsResult" type="number" class="fieldDisabled" >
+            <button id="btnCalculation" style="margin-top: 10%; font-size: 28pt;">OK!</button>
+
+        </div>
+    </div>
+
+    <div class="divRight divSide divCommon d-inline-block" style="height: 34.5%; margin-top: 10px; position: relative">
+        <div class="centerContent">
+
+            <div id="divTimer" style="height: 100%; width: 100%; color: white; font-size: 70pt; ">
+
+            </div>
+            <div id="divDice" style="height: 100%; width: 100%;">
+                <img id="imgDice" style="display: none">
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,72 @@
+*{
+    font-family: "Luckiest Guy", serif;
+}
+
+#divBackground {
+    background: #2c2c2c;
+    padding: 3%;
+}
+
+#divMain {
+    background-image: url("../image/bg-game.png");
+    background-repeat: repeat;
+    background-size: 280px;
+    background-position-x: -50px;
+    background-position-y: -35px;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+button{
+    border-radius: 100px !important;
+    background-color: rgba(169, 246, 138, 0.6) !important;
+    border: 3px solid #6e6e6e !important;
+    transition: all 150ms linear;
+}
+
+button:hover{
+    transition: all 280ms linear;
+    background-color: rgba(169, 246, 138, 0.9) !important;
+}
+
+.divChild{
+    height: 100%;
+    text-align: center;
+}
+
+.divContent{
+    background-color: rgba(169, 246, 138, 0.6);
+    width: fit-content;
+    text-align: center;
+}
+
+.divCommon {
+    border: 3px solid #6e6e6e;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.centerContent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fieldDisabled {
+    border-radius: 10px;
+    border: 3px solid #6e6e6e;
+    font-size: 30pt;
+    text-align: center;
+}
+
+#divMessage {
+    display: none;
+    background: white;
+    height: 0%;
+    width: 0%;
+}

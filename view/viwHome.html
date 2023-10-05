@@ -1,0 +1,33 @@
+<script>
+
+    $(document).ready(function(){
+
+        $("#divHome #btnIniciar").on("click",function (){
+            loadView("view/viwPlayers.html");
+        });
+
+    })
+
+</script>
+
+<style>
+
+    #btnIniciar {
+        font-weight: 500;
+        font-size: 25pt;
+        padding: 0 50px;
+        margin-top: 15px;
+    }
+
+</style>
+
+<div id="divHome" class="divChild" style="height: 100%">
+    <div class="centerContent">
+
+        <div id="divTitle" class="d-block divContent divCommon" style="padding: 10px 50px;">
+            <span style="font-size: 60pt; white-space: nowrap;"><span style="color: #005cbf">ESCADAS</span> E <span style="color: #c82333">SERPENTES</span></span>
+        </div>
+
+        <button id="btnIniciar" class="btn">INICIAR</button>
+    </div>
+</div>

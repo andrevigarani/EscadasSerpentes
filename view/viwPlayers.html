@@ -1,0 +1,56 @@
+<script>
+
+    $(document).ready(function(){
+
+        changeIntPlayer("");
+
+        $("#divPlayers #btnJogar").on("click",function (){
+            loadView("view/viwGame.html");
+        });
+
+    });
+
+</script>
+
+<style>
+
+    .arrow-img {
+        width: 100px;
+        margin: -15px 20px 0;
+        cursor: pointer;
+        display: inline;
+    }
+
+    #btnJogar {
+        font-weight: 500;
+        font-size: 25pt;
+        margin-top: 20px;
+        padding: 0 50px;
+    }
+
+    #intPlayer {
+        width: 85px;
+        height: 75px;
+    }
+
+</style>
+
+<div id="divPlayers" class="divChild">
+    <div class="centerContent">
+
+        <div id="divNumber" class="d-inline-block divContent divCommon" style="margin-top: 20px; padding: 10px 50px;">
+
+            <p style="font-size: 20pt">SELECIONE O NÚMERO DE JOGADORES:</p>
+
+            <img src="../image/arrow-red-left.png" class="arrow-img" onclick="changeIntPlayer('minus')" alt="Aumentar">
+            <input id="intPlayer" type="text" disabled="disabled" value="2" class="fieldDisabled">
+            <img src="../image/arrow-red-right.png" class="arrow-img" onclick="changeIntPlayer('plus')" alt="Diminuir">
+
+        </div>
+
+        <br>
+
+        <button id="btnJogar" class="btn" >Jogar</button>
+
+    </div>
+</div>

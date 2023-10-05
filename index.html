@@ -1,0 +1,45 @@
+<!doctype html>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Luckiest+Guy" />
+<link rel="stylesheet" href="library/general.css">
+<link rel="stylesheet" href="library/bootstrap.css">
+
+<link rel="icon" href="image/icon.png">
+
+<script type="text/javascript" src="library/utils.js"></script>
+<script type="text/javascript" src="library/jquery.js"></script>
+
+<script>
+
+    //Quando redimensionar tela ajustar div
+    $(window).resize(function(){
+        $('#divBackground').css('height', $(window).height());
+    });
+
+    $(document).ready(function(){
+
+        $('#divBackground').css('height', $(window).height());
+
+        //Carrega a tela inicial
+        loadView("view/viwHome.html");
+
+    });
+
+</script>
+
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Escadas e Serpentes</title>
+
+    </head>
+
+    <body>
+        <div id="divBackground">
+            <div id="divMain">
+
+            </div>
+        </div>
+    </body>
+</html>
